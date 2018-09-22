@@ -1,5 +1,6 @@
 package com.example.kylechan.plastickarma;
 
+import android.content.Intent;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
@@ -186,6 +187,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
+
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
         }
     }
     private boolean isEmailValid(String email) {
