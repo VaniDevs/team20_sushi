@@ -29,8 +29,8 @@ public class HomeActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     return true;
                 case R.id.navigation_camera:
-                    Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE)  ;
-                    startActivityForResult(cameraIntent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
+                    Intent cameraIntent = new Intent(HomeActivity.this, CameraActivity.class);
+                    startActivity(cameraIntent);
                     return true;
                 case R.id.navigation_manualInput:
                     Intent manInputIntent = new Intent(HomeActivity.this, ManualInputActivity.class);
