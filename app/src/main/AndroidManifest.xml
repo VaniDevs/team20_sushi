@@ -40,7 +40,9 @@
             android:name=".ResultActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_result"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".CameraActivity" />
     </application>
 
 </manifest>
