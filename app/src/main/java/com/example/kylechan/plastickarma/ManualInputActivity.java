@@ -13,7 +13,10 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -102,6 +105,16 @@ public class ManualInputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manual_input);
 
 
+        /*final Button inc1 = (Button)findViewById(R.id.inc1);
+        inc1.setOnClickListener((View.OnClickListener) this);
+        final Button dec2 = (Button)findViewById(R.id.dec2);
+        dec2.setOnClickListener((View.OnClickListener) this);
+        final Button inc2 = (Button)findViewById(R.id.inc2);
+        inc2.setOnClickListener((View.OnClickListener) this);
+        final Button dec3 = (Button)findViewById(R.id.dec3);
+        dec3.setOnClickListener((View.OnClickListener) this);*/
+
+
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
@@ -115,14 +128,162 @@ public class ManualInputActivity extends AppCompatActivity {
         autotextView.setAdapter(adapter);
 
         autotextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
                     Log.e("TAG","Done pressed");
                     String selection = autotextView.getText().toString();
-                    TextView input1 = (TextView) findViewById(R.id.input1);
-                    TextView input2 = (TextView) findViewById(R.id.input2);
-                    TextView input3 = (TextView) findViewById(R.id.input3);
-                    TextView input4 = (TextView) findViewById(R.id.input4);
+                    final TextView input1 = (TextView) findViewById(R.id.input1);
+                    final TextView input2 = (TextView) findViewById(R.id.input2);
+                    final TextView input3 = (TextView) findViewById(R.id.input3);
+                    final TextView input4 = (TextView) findViewById(R.id.input4);
+                    final TextView quantity1 = (TextView) findViewById(R.id.quantity1);
+                    final TextView quantity2 = (TextView) findViewById(R.id.quantity2);
+                    final TextView quantity3 = (TextView) findViewById(R.id.quantity3);
+                    final TextView quantity4 = (TextView) findViewById(R.id.quantity4);
+                    final TextView karma1 = (TextView) findViewById(R.id.karma1);
+                    final TextView karma2 = (TextView) findViewById(R.id.karma2);
+                    final TextView karma3 = (TextView) findViewById(R.id.karma3);
+                    final TextView karma4 = (TextView) findViewById(R.id.karma4);
+                    final TextView totalSum = (TextView) findViewById(R.id.totalSum);
+
+                    Button dec1 = (Button)findViewById(R.id.dec1);
+                    dec1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity1.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result--;
+                            quantity1.setText(Integer.toString(result));
+                            // updateSum(){
+                            // TODO: Sum  + karma2 + karma3 + karma4
+                            //karma1.getText().toString();
+                            //float ___  Float.parseFloa(karma1)
+                            // ^ do 4 times
+                            // add all 4 karma results
+                            // totalSum.setText(Float.toString(result));
+                            //}
+
+                            String karma = karma1.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res - 0.5f;
+                            karma1.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button inc1 = (Button)findViewById(R.id.inc1);
+                    inc1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity1.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result++;
+                            quantity1.setText(Integer.toString(result));
+
+                            String karma = karma1.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res + 0.5f;
+                            karma1.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button dec2 = (Button)findViewById(R.id.dec2);
+                    dec2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity2.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result--;
+                            quantity2.setText(Integer.toString(result));
+
+                            String karma = karma2.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res - 1.5f;
+                            karma2.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button inc2 = (Button)findViewById(R.id.inc2);
+                    inc2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity2.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result++;
+                            quantity2.setText(Integer.toString(result));
+
+                            String karma = karma2.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res + 1.5f;
+                            karma2.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button dec3 = (Button)findViewById(R.id.dec3);
+                    dec3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity3.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result--;
+                            quantity3.setText(Integer.toString(result));
+
+                            String karma = karma3.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res - 1.0f;
+                            karma3.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button inc3 = (Button)findViewById(R.id.inc3);
+                    inc3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity3.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result++;
+                            quantity3.setText(Integer.toString(result));
+
+                            String karma = karma3.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res + 1.0f;
+                            karma3.setText(Float.toString(karma_res));
+                        }
+                    });
+
+
+                    Button dec4 = (Button)findViewById(R.id.dec4);
+                    dec4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity4.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result--;
+                            quantity4.setText(Integer.toString(result));
+
+                            String karma = karma4.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res - 2.0f;
+                            karma4.setText(Float.toString(karma_res));
+                        }
+                    });
+
+                    Button inc4 = (Button)findViewById(R.id.inc4);
+                    inc4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String quantity = quantity4.getText().toString();
+                            int result = Integer.parseInt(quantity);
+                            result++;
+                            quantity4.setText(Integer.toString(result));
+
+                            String karma = karma1.getText().toString();
+                            float karma_res = Float.parseFloat(karma);
+                            karma_res = karma_res + 2.0f;
+                            karma1.setText(Float.toString(karma_res));
+                        }
+                    });
+
 
 
 
@@ -130,21 +291,37 @@ public class ManualInputActivity extends AppCompatActivity {
                         case 4:
                             input4.setText(selection);
                             input4.setVisibility(TextView.VISIBLE);
+                            dec4.setVisibility(View.VISIBLE);
+                            quantity4.setVisibility(TextView.VISIBLE);
+                            inc4.setVisibility(View.VISIBLE);
+                            karma4.setVisibility(TextView.VISIBLE);
                             position = 1;
                             break;
                         case 3:
                             input3.setText(selection);
                             input3.setVisibility(TextView.VISIBLE);
+                            dec3.setVisibility(View.VISIBLE);
+                            quantity3.setVisibility(TextView.VISIBLE);
+                            inc3.setVisibility(View.VISIBLE);
+                            karma3.setVisibility(TextView.VISIBLE);
                             position = 4;
                             break;
                         case 2:
                             input2.setText(selection);
                             input2.setVisibility(TextView.VISIBLE);
+                            dec2.setVisibility(View.VISIBLE);
+                            quantity2.setVisibility(TextView.VISIBLE);
+                            inc2.setVisibility(View.VISIBLE);
+                            karma2.setVisibility(TextView.VISIBLE);
                             position = 3;
                             break;
                         case 1:
                             input1.setText(selection);
                             input1.setVisibility(TextView.VISIBLE);
+                            dec1.setVisibility(View.VISIBLE);
+                            quantity1.setVisibility(TextView.VISIBLE);
+                            inc1.setVisibility(View.VISIBLE);
+                            karma1.setVisibility(TextView.VISIBLE);
                             position = 2;
                             break;
                     }
@@ -156,6 +333,10 @@ public class ManualInputActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        //set listener for buttons
+
 
 
 

@@ -54,8 +54,8 @@
         android:id="@+id/manual_input_field"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp"
         android:fontFamily="@font/montserratlight"
         android:hint="Search by name of UPC"
         android:imeOptions="actionDone"
@@ -65,6 +65,8 @@
         android:id="@+id/input_item"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical"
         android:text="INPUT ITEM:"
         android:textColor="#40c4ff"
         android:textSize="36sp" />
@@ -73,8 +75,8 @@
         android:id="@+id/item_list"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="170dp"
         android:text="ITEM LIST"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -84,48 +86,233 @@
         android:id="@+id/input1"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="160dp"
-        android:text="TEST"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="210dp"
         android:textColor="#000000"
         android:textSize="18sp"
         android:visibility="invisible"
         app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/quantity1"
+        android:layout_width="41dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="212dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#00e676"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <TextView
+        android:id="@+id/karma1"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="212dp"
+        android:text="0.0"
+        android:textColor="#ffa726"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <Button
+        android:id="@+id/dec1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="208dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/inc1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="208dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/input2"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="190dp"
-        android:text="TEST"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="240dp"
         android:textColor="#000000"
         android:textSize="18sp"
         android:visibility="invisible"
         app:fontFamily="@font/latolight" />
+
+
+    <TextView
+        android:id="@+id/quantity2"
+        android:layout_width="41dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="242dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#00e676"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <TextView
+        android:id="@+id/karma2"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="242dp"
+        android:text="0.0"
+        android:textColor="#e64a19"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <Button
+        android:id="@+id/dec2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="238dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/inc2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="238dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/input3"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="220dp"
-        android:text="TEST"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="270dp"
         android:textColor="#000000"
         android:textSize="18sp"
         android:visibility="invisible"
         app:fontFamily="@font/latolight" />
 
     <TextView
+        android:id="@+id/karma3"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="272dp"
+        android:text="0.0"
+        android:textColor="#ffa726"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <TextView
+        android:id="@+id/quantity3"
+        android:layout_width="41dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="272dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#00e676"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <Button
+        android:id="@+id/dec3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="268dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/inc3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="268dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <TextView
         android:id="@+id/input4"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="250dp"
-        android:text="TEST"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="300dp"
         android:textColor="#000000"
         android:textSize="18sp"
         android:visibility="invisible"
         app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/karma4"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="302dp"
+        android:text="0.0"
+        android:textColor="#e64a19"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+
+    <TextView
+        android:id="@+id/quantity4"
+        android:layout_width="41dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="302dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#00e676"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <Button
+        android:id="@+id/dec4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="298dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/inc4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="298dp"
+        android:textSize="18sp"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/total_usage"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="50dp"
+        android:gravity="right|center_vertical"
+        android:text="Total Plastic Usage "
+        android:textColor="#424242"
+        android:textSize="28sp"
+        app:fontFamily="@font/latoregular" />
+
+    <TextView
+        android:id="@+id/totalSum"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#424242"
+        app:fontFamily="@font/latoregular" />
+
 
 </FrameLayout>
