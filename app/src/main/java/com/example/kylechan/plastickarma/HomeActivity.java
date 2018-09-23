@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -46,10 +47,7 @@ public class HomeActivity extends AppCompatActivity {
 
    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-//        Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-//        imageView.setImageBitmap(bitmap);
-
+       super.onActivityResult(requestCode, resultCode, data);
        if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
            if (resultCode == HomeActivity.RESULT_OK) {
                Intent resultIntent = new Intent(HomeActivity.this, ResultActivity.class);
@@ -60,8 +58,6 @@ public class HomeActivity extends AppCompatActivity {
                // Image capture failed, advise user
            }
        }
-
-
    }
 
 
@@ -70,6 +66,12 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         imageView = (ImageView)findViewById(R.id.imageView);
+        //mTextMessage = (TextView) findViewById(R.id.message);
+
+        //scrolling image
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        ImageAdapter adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
