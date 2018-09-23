@@ -5,16 +5,26 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.TextView;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
 public class ManualInputActivity extends AppCompatActivity {
+    private static int position = 1;
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -85,18 +95,69 @@ public class ManualInputActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_input);
 
+
+
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, PRODUCTS);
-        AutoCompleteTextView autotextView = (AutoCompleteTextView)findViewById(R.id.manual_input_field);
+        String[] products = getResources().getStringArray(R.array.products);
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, products);
+        final AutoCompleteTextView autotextView = (AutoCompleteTextView) findViewById(R.id.manual_input_field);
         autotextView.setAdapter(adapter);
+
+        autotextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    Log.e("TAG","Done pressed");
+                    String selection = autotextView.getText().toString();
+                    TextView input1 = (TextView) findViewById(R.id.input1);
+                    TextView input2 = (TextView) findViewById(R.id.input2);
+                    TextView input3 = (TextView) findViewById(R.id.input3);
+                    TextView input4 = (TextView) findViewById(R.id.input4);
+
+
+
+                    switch (position){
+                        case 4:
+                            input4.setText(selection);
+                            input4.setVisibility(TextView.VISIBLE);
+                            position = 1;
+                            break;
+                        case 3:
+                            input3.setText(selection);
+                            input3.setVisibility(TextView.VISIBLE);
+                            position = 4;
+                            break;
+                        case 2:
+                            input2.setText(selection);
+                            input2.setVisibility(TextView.VISIBLE);
+                            position = 3;
+                            break;
+                        case 1:
+                            input1.setText(selection);
+                            input1.setVisibility(TextView.VISIBLE);
+                            position = 2;
+                            break;
+                    }
+
+
+                    System.out.println(selection);
+                    autotextView.getText().clear();
+                }
+                return false;
+            }
+        });
+
+
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
@@ -111,10 +172,6 @@ public class ManualInputActivity extends AppCompatActivity {
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
     }
-
-    public static final String[] PRODUCTS = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain"
-    };
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

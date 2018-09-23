@@ -28,4 +28,18 @@
     <string name="title_profile">Profile</string>
 
     <string name="title_activity_result">ResultActivity</string>
+
+    <string-array name="products">
+        <item>2L Coca-Cola Bottle</item>
+        <item>Can of Coca-Cola</item>
+        <item>2L Pepsi Bottle</item>
+        <item>Can of Pepsi</item>
+        <item>Plastic Spoon</item>
+        <item>Plastic Fork</item>
+        <item>Plastic Water Bottle</item>
+        <item>Plastic Bag (Small)</item>
+        <item>Plastic Bag (Medium)</item>
+        <item>Plastic Bag (Large)</item>
+    </string-array>
+
 </resources>

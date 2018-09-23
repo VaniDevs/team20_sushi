@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -53,16 +54,78 @@
         android:id="@+id/manual_input_field"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/montserratlight"
-        android:text="Search by name of UPC" />
+        android:hint="Search by name of UPC"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/input_item"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="INPUT ITEM:"
         android:textColor="#40c4ff"
-        android:textSize="49sp" />
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/item_list"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:text="ITEM LIST"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/input1"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="160dp"
+        android:text="TEST"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/input2"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="190dp"
+        android:text="TEST"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/input3"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="220dp"
+        android:text="TEST"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:fontFamily="@font/latolight" />
+
+    <TextView
+        android:id="@+id/input4"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
+        android:text="TEST"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:fontFamily="@font/latolight" />
 
 </FrameLayout>
