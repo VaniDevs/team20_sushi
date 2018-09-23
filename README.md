@@ -1,7 +1,7 @@
 # team20_sushi
-Product Database API - [internal source](#Plastic-Karma-Product-Database-API), [external source](https://github.com/tokyojack/Plastic-Karma-Product-Rest-API)
+Product Database API - [[internal source]](#Plastic-Karma-Product-Database-API), [[external source]](https://github.com/tokyojack/Plastic-Karma-Product-Rest-API)
 <br/>
-User Database API - [internal source](#Plastic-Karma-User-Database-API), [external source](https://github.com/tokyojack/Plastic-Karma-User-Rest-API)
+User Database API - [[internal source]](#Plastic-Karma-User-Database-API), [[xternal source]](https://github.com/tokyojack/Plastic-Karma-User-Rest-API)
 
 ---
 
