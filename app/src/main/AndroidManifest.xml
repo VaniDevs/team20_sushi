@@ -25,7 +25,17 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"></activity>
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".ManualInputActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_manual_input"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>
