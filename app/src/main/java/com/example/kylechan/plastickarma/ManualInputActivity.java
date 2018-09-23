@@ -1,6 +1,7 @@
 package com.example.kylechan.plastickarma;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -105,15 +106,14 @@ public class ManualInputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manual_input);
 
 
-        /*final Button inc1 = (Button)findViewById(R.id.inc1);
-        inc1.setOnClickListener((View.OnClickListener) this);
-        final Button dec2 = (Button)findViewById(R.id.dec2);
-        dec2.setOnClickListener((View.OnClickListener) this);
-        final Button inc2 = (Button)findViewById(R.id.inc2);
-        inc2.setOnClickListener((View.OnClickListener) this);
-        final Button dec3 = (Button)findViewById(R.id.dec3);
-        dec3.setOnClickListener((View.OnClickListener) this);*/
-
+        Button complete = (Button)findViewById(R.id.complete);
+        complete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent homeIntent = new Intent(ManualInputActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+            }
+        });
 
 
         mVisible = true;
@@ -145,6 +145,10 @@ public class ManualInputActivity extends AppCompatActivity {
                     final TextView karma2 = (TextView) findViewById(R.id.karma2);
                     final TextView karma3 = (TextView) findViewById(R.id.karma3);
                     final TextView karma4 = (TextView) findViewById(R.id.karma4);
+                    final TextView karmaText1 = (TextView) findViewById(R.id.karmaText1);
+                    final TextView karmaText2 = (TextView) findViewById(R.id.karmaText2);
+                    final TextView karmaText3 = (TextView) findViewById(R.id.karmaText3);
+                    final TextView karmaText4 = (TextView) findViewById(R.id.karmaText4);
                     final TextView totalSum = (TextView) findViewById(R.id.totalSum);
 
                     Button dec1 = (Button)findViewById(R.id.dec1);
@@ -295,6 +299,7 @@ public class ManualInputActivity extends AppCompatActivity {
                             quantity4.setVisibility(TextView.VISIBLE);
                             inc4.setVisibility(View.VISIBLE);
                             karma4.setVisibility(TextView.VISIBLE);
+                            karmaText4.setVisibility(TextView.VISIBLE);
                             position = 1;
                             break;
                         case 3:
@@ -304,6 +309,7 @@ public class ManualInputActivity extends AppCompatActivity {
                             quantity3.setVisibility(TextView.VISIBLE);
                             inc3.setVisibility(View.VISIBLE);
                             karma3.setVisibility(TextView.VISIBLE);
+                            karmaText3.setVisibility(TextView.VISIBLE);
                             position = 4;
                             break;
                         case 2:
@@ -313,6 +319,7 @@ public class ManualInputActivity extends AppCompatActivity {
                             quantity2.setVisibility(TextView.VISIBLE);
                             inc2.setVisibility(View.VISIBLE);
                             karma2.setVisibility(TextView.VISIBLE);
+                            karmaText2.setVisibility(TextView.VISIBLE);
                             position = 3;
                             break;
                         case 1:
@@ -322,6 +329,7 @@ public class ManualInputActivity extends AppCompatActivity {
                             quantity1.setVisibility(TextView.VISIBLE);
                             inc1.setVisibility(View.VISIBLE);
                             karma1.setVisibility(TextView.VISIBLE);
+                            karmaText1.setVisibility(TextView.VISIBLE);
                             position = 2;
                             break;
                     }

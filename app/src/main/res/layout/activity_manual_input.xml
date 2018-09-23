@@ -52,11 +52,11 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/Complete"
+            android:id="@+id/complete"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="500dp"
             android:background="#40c4ff"
             android:fontFamily="@font/latobold"
             android:text="Complete"
@@ -137,6 +137,7 @@
         android:layout_marginTop="212dp"
         android:text="Karma Points"
         android:textColor="#ffa726"
+        android:visibility="invisible"
         app:fontFamily="@font/latoregular" />
 
     <Button
@@ -200,6 +201,7 @@
         android:layout_marginTop="242dp"
         android:text="Karma Points"
         android:textColor="#ffa726"
+        android:visibility="invisible"
         app:fontFamily="@font/latoregular" />
 
     <Button
@@ -250,6 +252,7 @@
         android:layout_marginTop="272dp"
         android:text="Karma Points"
         android:textColor="#ffa726"
+        android:visibility="invisible"
         app:fontFamily="@font/latoregular" />
 
     <TextView
@@ -312,6 +315,7 @@
         android:layout_marginTop="302dp"
         android:text="Karma Points"
         android:textColor="#ffa726"
+        android:visibility="invisible"
         app:fontFamily="@font/latoregular" />
 
 
