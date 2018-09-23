@@ -56,11 +56,19 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="650dp"
             android:background="#40c4ff"
             android:fontFamily="@font/latobold"
             android:text="Complete"
             android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="58dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="55dp"
+            app:srcCompat="@drawable/bottle" />
     </FrameLayout>
 
     <AutoCompleteTextView
@@ -367,7 +375,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
-        android:paddingLeft="45dp"
+        android:paddingLeft="20dp"
         android:paddingTop="11dp"
         android:text="0"
         android:textColor="@color/design_default_color_primary"
