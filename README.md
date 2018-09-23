@@ -10,9 +10,11 @@ User Database API - [[internal source]](#plastic-karma-user-database-api), [[ext
 ## Overview
 
 Plastic Karma's REST API is a scaleable, quick, and efficent program. Using MongoDB and their Atlas service for scalable servers,
-Heroku for scalable Node.js servers, and Express for quick responses and maximum efficentcy. The API allows all of our platforms (IOS, Andriod,
+Heroku for scalable Node.js servers, and Express for quick responses and maximum efficiency. The API allows all of our platforms (IOS, Andriod,
 Websites), to communicate on one centeral database servers. This allows us to just change the one server instead of all of our platforms,
 allowing increased reliability and ease of use.
+
+Our Product Database is responsible for storing a collection of universal product codes and the corresponding environmental impact data.
 
 ## Tutorial
 
@@ -147,9 +149,12 @@ For support, simply just email us at support@plastickarma.com
 ## Overview
 
 Plastic Karma's REST API is a scaleable, quick, and efficent program. Using MongoDB and their Atlas service for scalable servers,
-Heroku for scalable Node.js servers, and Express for quick responses and maximum efficentcy. The API allows all of our platforms (IOS, Andriod,
+Heroku for scalable Node.js servers, and Express for quick responses and maximum efficiency. The API allows all of our platforms (IOS, Andriod,
 Websites), to communicate on one centeral database servers. This allows us to just change the one server instead of all of our platforms,
 allowing increased reliability and ease of use.
+
+Our User Database is responsible for storing a collection of user data and their karma score.
+
 
 ## Tutorial
 
