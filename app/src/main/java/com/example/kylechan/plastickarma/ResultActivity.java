@@ -1,12 +1,14 @@
 package com.example.kylechan.plastickarma;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -99,6 +101,15 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 toggle();
+            }
+        });
+
+        //add function to complete button
+        Button buttonComplete = (Button) findViewById(R.id.buttonComplete);
+        buttonComplete.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(ResultActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
