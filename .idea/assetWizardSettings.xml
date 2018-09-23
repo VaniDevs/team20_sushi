@@ -19,8 +19,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/pngtest.png" />
-                                      <entry key="outputName" value="test1" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Downloads/bottle.svg" />
+                                      <entry key="outputName" value="bottle1" />
                                     </map>
                                   </option>
                                 </PersistentState>

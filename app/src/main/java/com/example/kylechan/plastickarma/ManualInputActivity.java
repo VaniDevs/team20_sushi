@@ -99,6 +99,15 @@ public class ManualInputActivity extends AppCompatActivity {
         }
     };
 
+    //update button
+    protected void updateTotal(Float sum, TextView totalSum) {
+
+        String total = totalSum.getText().toString();
+        Float total_sum = Float.parseFloat(total);
+        total_sum += sum;
+
+        totalSum.setText(Float.toString(total_sum));
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,7 +123,6 @@ public class ManualInputActivity extends AppCompatActivity {
                 startActivity(homeIntent);
             }
         });
-
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
@@ -151,6 +159,7 @@ public class ManualInputActivity extends AppCompatActivity {
                     final TextView karmaText4 = (TextView) findViewById(R.id.karmaText4);
                     final TextView totalSum = (TextView) findViewById(R.id.totalSum);
 
+
                     Button dec1 = (Button)findViewById(R.id.dec1);
                     dec1.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -159,19 +168,13 @@ public class ManualInputActivity extends AppCompatActivity {
                             int result = Integer.parseInt(quantity);
                             result--;
                             quantity1.setText(Integer.toString(result));
-                            // updateSum(){
-                            // TODO: Sum  + karma2 + karma3 + karma4
-                            //karma1.getText().toString();
-                            //float ___  Float.parseFloa(karma1)
-                            // ^ do 4 times
-                            // add all 4 karma results
-                            // totalSum.setText(Float.toString(result));
-                            //}
 
                             String karma = karma1.getText().toString();
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res - 5f;
                             karma1.setText(Float.toString(karma_res));
+
+                            updateTotal(-5f, totalSum);
                         }
                     });
 
@@ -188,6 +191,8 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res + 5f;
                             karma1.setText(Float.toString(karma_res));
+
+                            updateTotal(5f, totalSum);
                         }
                     });
 
@@ -204,6 +209,9 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res - 15f;
                             karma2.setText(Float.toString(karma_res));
+
+                            updateTotal(-15f, totalSum);
+
                         }
                     });
 
@@ -220,6 +228,8 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res + 15f;
                             karma2.setText(Float.toString(karma_res));
+
+                            updateTotal(15f, totalSum);
                         }
                     });
 
@@ -236,6 +246,9 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res - 10f;
                             karma3.setText(Float.toString(karma_res));
+
+                            updateTotal(-10f, totalSum);
+
                         }
                     });
 
@@ -252,6 +265,9 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res + 10f;
                             karma3.setText(Float.toString(karma_res));
+
+                            updateTotal(10f, totalSum);
+
                         }
                     });
 
@@ -269,6 +285,8 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res - 20f;
                             karma4.setText(Float.toString(karma_res));
+
+                            updateTotal(-20f, totalSum);
                         }
                     });
 
@@ -285,6 +303,9 @@ public class ManualInputActivity extends AppCompatActivity {
                             float karma_res = Float.parseFloat(karma);
                             karma_res = karma_res + 20f;
                             karma1.setText(Float.toString(karma_res));
+
+                            updateTotal(20f, totalSum);
+
                         }
                     });
 

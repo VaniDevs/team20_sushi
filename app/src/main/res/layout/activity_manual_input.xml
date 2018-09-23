@@ -364,11 +364,14 @@
 
     <TextView
         android:id="@+id/totalSum"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
-        android:textColor="#424242"
+        android:paddingLeft="45dp"
+        android:paddingTop="11dp"
+        android:text="0"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="28sp"
         app:fontFamily="@font/latoregular" />
 
 
