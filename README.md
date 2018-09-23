@@ -18,7 +18,7 @@ Our Product Database is responsible for storing a collection of universal produc
 
 ## Tutorial
 
-Some sample with [Postman](https://www.getpostman.com/) can be found [Postman](https://www.getpostman.com/collections/0bd736c7995968861cfc).
+Some sample with [Postman](https://www.getpostman.com/) can be found [here](https://www.getpostman.com/collections/0bd736c7995968861cfc).
 
 ## Deploying
 
@@ -138,10 +138,6 @@ Some sample with [Postman](https://www.getpostman.com/) can be found [Postman](h
 ```
 <h2></h2>
 
-### Support
-
-For support, simply just email us at support@plastickarma.com
-
 ---
 
 # Plastic Karma User Database API
@@ -158,7 +154,7 @@ Our User Database is responsible for storing a collection of user data and their
 
 ## Tutorial
 
-Some sample with [Postman](https://www.getpostman.com/) can be found [Postman](https://www.getpostman.com/collections/0bd736c7995968861cfc).
+Some sample with [Postman](https://www.getpostman.com/) can be found [here](https://www.getpostman.com/collections/0bd736c7995968861cfc).
 
 ## Deploying
 
