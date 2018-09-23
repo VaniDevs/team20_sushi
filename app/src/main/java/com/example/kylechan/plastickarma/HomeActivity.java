@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -71,6 +72,12 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         imageView = (ImageView)findViewById(R.id.imageView);
         //mTextMessage = (TextView) findViewById(R.id.message);
+
+        //scrolling image
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        ImageAdapter adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
