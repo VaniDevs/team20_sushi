@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
-    private TextView mTextMessage;
+    private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
 
     // set the Image view of the Camera
     ImageView imageView;
@@ -26,11 +26,10 @@ public class HomeActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
                     return true;
                 case R.id.navigation_camera:
                     Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE)  ;
-                    startActivityForResult(cameraIntent,0);
+                    startActivityForResult(cameraIntent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
                     return true;
                 case R.id.navigation_manualInput:
                     Intent manInputIntent = new Intent(HomeActivity.this, ManualInputActivity.class);
@@ -48,9 +47,22 @@ public class HomeActivity extends AppCompatActivity {
    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-        imageView.setImageBitmap(bitmap);
-    }
+//        Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+//        imageView.setImageBitmap(bitmap);
+
+       if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+           if (resultCode == HomeActivity.RESULT_OK) {
+               Intent resultIntent = new Intent(HomeActivity.this, ResultActivity.class);
+               startActivity(resultIntent);
+           } else if (resultCode == HomeActivity.RESULT_CANCELED) {
+               // User cancelled the image capture
+           } else {
+               // Image capture failed, advise user
+           }
+       }
+
+
+   }
 
 
         @Override
@@ -58,7 +70,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         imageView = (ImageView)findViewById(R.id.imageView);
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

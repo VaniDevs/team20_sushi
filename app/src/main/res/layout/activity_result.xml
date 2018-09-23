@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#0099cc"
     tools:context=".ResultActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -15,10 +15,10 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:textColor="@android:color/background_dark"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:visibility="invisible" />
+        android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
@@ -35,7 +35,6 @@
             android:layout_gravity="bottom|center_horizontal"
             android:background="@color/black_overlay"
             android:orientation="horizontal"
-            android:visibility="invisible"
             tools:ignore="UselessParent">
 
             <Button
@@ -48,21 +47,5 @@
 
         </LinearLayout>
     </FrameLayout>
-
-    <AutoCompleteTextView
-        android:id="@+id/manual_input_field"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/montserratlight"
-        android:text="Search by name of UPC" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="INPUT ITEM:"
-        android:textColor="#40c4ff"
-        android:textSize="49sp" />
 
 </FrameLayout>
