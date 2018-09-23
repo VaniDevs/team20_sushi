@@ -166,7 +166,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma1.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res - 0.5f;
+                            karma_res = karma_res - 5f;
                             karma1.setText(Float.toString(karma_res));
                         }
                     });
@@ -182,7 +182,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma1.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res + 0.5f;
+                            karma_res = karma_res + 5f;
                             karma1.setText(Float.toString(karma_res));
                         }
                     });
@@ -198,7 +198,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma2.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res - 1.5f;
+                            karma_res = karma_res - 15f;
                             karma2.setText(Float.toString(karma_res));
                         }
                     });
@@ -214,7 +214,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma2.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res + 1.5f;
+                            karma_res = karma_res + 15f;
                             karma2.setText(Float.toString(karma_res));
                         }
                     });
@@ -230,7 +230,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma3.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res - 1.0f;
+                            karma_res = karma_res - 10f;
                             karma3.setText(Float.toString(karma_res));
                         }
                     });
@@ -246,7 +246,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma3.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res + 1.0f;
+                            karma_res = karma_res + 10f;
                             karma3.setText(Float.toString(karma_res));
                         }
                     });
@@ -263,7 +263,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma4.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res - 2.0f;
+                            karma_res = karma_res - 20f;
                             karma4.setText(Float.toString(karma_res));
                         }
                     });
@@ -279,7 +279,7 @@ public class ManualInputActivity extends AppCompatActivity {
 
                             String karma = karma1.getText().toString();
                             float karma_res = Float.parseFloat(karma);
-                            karma_res = karma_res + 2.0f;
+                            karma_res = karma_res + 20f;
                             karma1.setText(Float.toString(karma_res));
                         }
                     });

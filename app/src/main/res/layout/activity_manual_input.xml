@@ -10,6 +10,8 @@
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
+
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -48,6 +50,17 @@
                 android:text="@string/dummy_button" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/Complete"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="450dp"
+            android:background="#40c4ff"
+            android:fontFamily="@font/latobold"
+            android:text="Complete"
+            android:textColor="#FFFFFF" />
     </FrameLayout>
 
     <AutoCompleteTextView
@@ -95,7 +108,7 @@
 
     <TextView
         android:id="@+id/quantity1"
-        android:layout_width="41dp"
+        android:layout_width="31dp"
         android:layout_height="21dp"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="212dp"
@@ -107,14 +120,24 @@
 
     <TextView
         android:id="@+id/karma1"
+        android:layout_width="30dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="258dp"
+        android:layout_marginTop="212dp"
+        android:text="0"
+        android:textColor="#ffa726"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <TextView
+        android:id="@+id/karmaText1"
         android:layout_width="130dp"
         android:layout_height="21dp"
         android:layout_marginLeft="295dp"
         android:layout_marginTop="212dp"
-        android:text="0.0"
+        android:text="Karma Points"
         android:textColor="#ffa726"
-        android:visibility="invisible"
-        app:fontFamily="@font/latobold" />
+        app:fontFamily="@font/latoregular" />
 
     <Button
         android:id="@+id/dec1"
@@ -129,7 +152,7 @@
         android:id="@+id/inc1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="230dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="208dp"
         android:textSize="18sp"
         android:visibility="invisible" />
@@ -160,14 +183,24 @@
 
     <TextView
         android:id="@+id/karma2"
+        android:layout_width="30dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="258dp"
+        android:layout_marginTop="242dp"
+        android:text="0"
+        android:textColor="#e64a19"
+        android:visibility="invisible"
+        app:fontFamily="@font/latobold" />
+
+    <TextView
+        android:id="@+id/karmaText2"
         android:layout_width="130dp"
         android:layout_height="21dp"
         android:layout_marginLeft="295dp"
         android:layout_marginTop="242dp"
-        android:text="0.0"
-        android:textColor="#e64a19"
-        android:visibility="invisible"
-        app:fontFamily="@font/latobold" />
+        android:text="Karma Points"
+        android:textColor="#ffa726"
+        app:fontFamily="@font/latoregular" />
 
     <Button
         android:id="@+id/dec2"
@@ -182,7 +215,7 @@
         android:id="@+id/inc2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="230dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="238dp"
         android:textSize="18sp"
         android:visibility="invisible" />
@@ -200,18 +233,28 @@
 
     <TextView
         android:id="@+id/karma3"
-        android:layout_width="130dp"
+        android:layout_width="30dp"
         android:layout_height="21dp"
-        android:layout_marginLeft="295dp"
+        android:layout_marginLeft="258dp"
         android:layout_marginTop="272dp"
-        android:text="0.0"
+        android:text="0"
         android:textColor="#ffa726"
         android:visibility="invisible"
         app:fontFamily="@font/latobold" />
 
     <TextView
+        android:id="@+id/karmaText3"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="272dp"
+        android:text="Karma Points"
+        android:textColor="#ffa726"
+        app:fontFamily="@font/latoregular" />
+
+    <TextView
         android:id="@+id/quantity3"
-        android:layout_width="41dp"
+        android:layout_width="31dp"
         android:layout_height="21dp"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="272dp"
@@ -234,7 +277,7 @@
         android:id="@+id/inc3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="230dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="268dp"
         android:textSize="18sp"
         android:visibility="invisible" />
@@ -252,19 +295,29 @@
 
     <TextView
         android:id="@+id/karma4"
-        android:layout_width="130dp"
+        android:layout_width="30dp"
         android:layout_height="21dp"
-        android:layout_marginLeft="295dp"
+        android:layout_marginLeft="258dp"
         android:layout_marginTop="302dp"
-        android:text="0.0"
+        android:text="0"
         android:textColor="#e64a19"
         android:visibility="invisible"
         app:fontFamily="@font/latobold" />
 
+    <TextView
+        android:id="@+id/karmaText4"
+        android:layout_width="130dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="302dp"
+        android:text="Karma Points"
+        android:textColor="#ffa726"
+        app:fontFamily="@font/latoregular" />
+
 
     <TextView
         android:id="@+id/quantity4"
-        android:layout_width="41dp"
+        android:layout_width="31dp"
         android:layout_height="21dp"
         android:layout_marginLeft="190dp"
         android:layout_marginTop="302dp"
@@ -287,7 +340,7 @@
         android:id="@+id/inc4"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="230dp"
+        android:layout_marginLeft="220dp"
         android:layout_marginTop="298dp"
         android:textSize="18sp"
         android:visibility="invisible" />
