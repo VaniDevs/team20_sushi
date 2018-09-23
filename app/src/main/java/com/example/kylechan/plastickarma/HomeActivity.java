@@ -36,10 +36,10 @@ public class HomeActivity extends AppCompatActivity {
                     Intent manInputIntent = new Intent(HomeActivity.this, ManualInputActivity.class);
                     startActivity(manInputIntent);
                     return true;
-                case R.id.navigation_profile:
+                /*case R.id.navigation_profile:
                     Intent profileIntent = new Intent(HomeActivity.this, ProfileActivity.class);
                     startActivity(profileIntent);
-                    return true;
+                    return true;*/
             }
             return false;
         }
@@ -68,7 +68,8 @@ public class HomeActivity extends AppCompatActivity {
         imageView = (ImageView)findViewById(R.id.imageView);
         //mTextMessage = (TextView) findViewById(R.id.message);
 
-        //scrolling image
+
+            //scrolling image
         ViewPager viewPager = findViewById(R.id.viewPager);
         ImageAdapter adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);

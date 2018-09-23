@@ -15,9 +15,9 @@
         android:id="@+id/navigation_manualInput"
         android:icon="@drawable/ic_notifications_black_24dp"
         android:title="@string/title_manualInput" />
-    <item
+    <!--<item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_profile" />
+        android:title="@string/title_profile" />-->
 
 </menu>
