@@ -12,7 +12,7 @@ import com.example.kylechan.plastickarma.R;
 public class ImageAdapter extends PagerAdapter {
 
     private Context mContext;
-    private int[] mimageIds = new int[] {R.drawable.pie1, R.drawable.pie2};
+    private int[] mimageIds = new int[] {R.drawable.pie2, R.drawable.pie1};
 
     ImageAdapter(Context context) {
         mContext = context;
